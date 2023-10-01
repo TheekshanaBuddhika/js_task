@@ -63,7 +63,10 @@
 
     //----------------------------------------------------Task 4 ------------------------------------------
     document.querySelector('#btn2').addEventListener("click",function(){
-        document.querySelector('#img').style.backgroundImage = "url("+document.querySelector('#url').value+")";
+        var divContainer = document.querySelector('#img');
+        var img = document.querySelector('#url').value;
+
+        divContainer.style.backgroundImage = `url(${img})`;
     });
 
 </script>
