@@ -89,8 +89,9 @@
         let content = document.querySelector('#txt').value;
         let list = document.querySelector('#list');
         let entry = document.createElement('li');
-        entry.appendChild(document.createTextNode(content));
-        list.appendChild(entry);
+        entry.setAttribute("class","list-group-item");
+        entry.textContent = content;
+        list.append(entry);
 
     });
 
