@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
     <title>DOM</title>
 </head>
-<body>
+<!-- <body>
 <section class="container mt-5">
     <h1 id="h1ID">What is BOM & What is DOM</h1>
     <h1 class="h1Class">What is BOM & What is DOM</h1>
@@ -13,7 +14,28 @@
     <hr>
     <input class="form-control" type="text" name="cusName">
     <button class="btn btn-danger mt-3">Test</button>
+</section> -->
+
+
+<section class="container mt-3">
+    <section class="row">
+        <!--Case One-->
+        <div class="col">
+            <h1 id="txt1">Hello There How are you.?</h1>
+            <input id="txt" class="form-control" type="text" placeholder="Input Something">
+            <button id="btn1" class="mt-2 btn btn-danger">Change Text</button>
+        </div>
+
+        <!--Case Two-->
+        <div class="col">
+            <h1>Input an Image Url</h1>
+            <input id="url" class="form-control" type="url" placeholder="Input Image URL">
+            <div id="img" style="height: 50vh" class="mt-2 border shadow"></div>
+            <button id="btn2" class="mt-2 btn btn-danger">Change Image</button>
+        </div>
+    </section>
 </section>
+
 
 
 <script>
@@ -25,8 +47,18 @@
 
 
     // ----------------------------------------------Task 2----------------------------------------
-    document.querySelector('button').addEventListener("click",function(){
-        document.querySelector('.h1Class').innerText = document.querySelector('input').value;
+    // document.querySelector('button').addEventListener("click",function(){
+    //     document.querySelector('.h1Class').innerText = document.querySelector('input').value;
+    // });
+
+
+        // -----------------------------------------------Task 3 --------------------------------------
+        document.querySelector('#txt').addEventListener("keypress",function(){
+        document.querySelector('#txt1').innerText = document.querySelector('#txt').value;
+    });
+
+    document.querySelector('#btn1').addEventListener("click",function(){
+        document.querySelector('#txt1').style.color = "red";
     });
 
 </script>
