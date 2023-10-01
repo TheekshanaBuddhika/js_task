@@ -17,26 +17,39 @@
 </section> -->
 
 
-<section class="container mt-3">
-    <section class="row">
+<!-- <section class="container mt-3">
+    <section class="row"> -->
         <!--Case One-->
-        <div class="col">
+        <!-- <div class="col">
             <h1 id="txt1">Hello There How are you.?</h1>
             <input id="txt" class="form-control" type="text" placeholder="Input Something">
             <button id="btn1" class="mt-2 btn btn-danger">Change Text</button>
-        </div>
+        </div> -->
 
         <!--Case Two-->
-        <div class="col">
+        <!-- <div class="col">
             <h1>Input an Image Url</h1>
             <input id="url" class="form-control" type="url" placeholder="Input Image URL">
             <div id="img" style="background-size: contain;background-repeat: no-repeat; background-position: center;height: 50vh;" class="mt-2 border shadow"></div>
             <button id="btn2" class="mt-2 btn btn-danger">Change Image</button>
-        </div>
-    </section>
+        </div> -->
+    <!-- </section>
+</section> -->
+
+<section class="container">
+    <h1>Task Generator.!</h1>
+   <div class="row">
+       <div class="col-4">
+           <input id="txt" class="form-control" type="text" placeholder="Input a Task">
+           <button id="btn" class="btn btn-danger mt-2">Add Task</button>
+       </div>
+       <div class="offset-1 col-3 shadow overflow-x-hidden" style="height: 70vh">
+           <ol id="list" class="list-group p-2">
+               <li class="list-group-item">Task One</li>
+           </ol>
+       </div>
+   </div>
 </section>
-
-
 
 <script>
 
@@ -62,11 +75,23 @@
     // });
 
     //----------------------------------------------------Task 4 ------------------------------------------
-    document.querySelector('#btn2').addEventListener("click",function(){
-        var divContainer = document.querySelector('#img');
-        var img = document.querySelector('#url').value;
+    // document.querySelector('#btn2').addEventListener("click",function(){
+    //     var divContainer = document.querySelector('#img');
+    //     var img = document.querySelector('#url').value;
 
-        divContainer.style.backgroundImage = `url(${img})`;
+    //     divContainer.style.backgroundImage = `url(${img})`;
+    // });
+
+
+    //-----------------------------------------------------Task 5 -------------------------------------------
+
+    document.querySelector('#btn').addEventListener("click",function(){
+        let content = document.querySelector('#txt').value;
+        let list = document.querySelector('#list');
+        let entry = document.createElement('li');
+        entry.appendChild(document.createTextNode(content));
+        list.appendChild(entry);
+       
     });
 
 </script>
