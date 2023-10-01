@@ -53,12 +53,17 @@
 
 
         // -----------------------------------------------Task 3 --------------------------------------
-        document.querySelector('#txt').addEventListener("keyup",function(){
-        document.querySelector('#txt1').innerText = document.querySelector('#txt').value;
-    });
+    //     document.querySelector('#txt').addEventListener("keyup",function(){
+    //     document.querySelector('#txt1').innerText = document.querySelector('#txt').value;
+    // });
 
-    document.querySelector('#btn1').addEventListener("click",function(){
-        document.querySelector('#txt1').style.color = "red";
+    // document.querySelector('#btn1').addEventListener("click",function(){
+    //     document.querySelector('#txt1').style.color = "red";
+    // });
+
+    //----------------------------------------------------Task 4 ------------------------------------------
+    document.querySelector('#btn2').addEventListener("click",function(){
+        document.querySelector('#img').style.backgroundImage = "url("+document.querySelector('#url').value+")";
     });
 
 </script>
