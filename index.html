@@ -5,8 +5,9 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <title>DOM</title>
 </head>
-<!-- <body>
-<section class="container mt-5">
+ <body class="bg-dark">
+<section class="container mt-5 position-relative bg-info p-2">
+    <hr><h1>Task 1 & Task 2</h1><hr> 
     <h1 id="h1ID">What is BOM & What is DOM</h1>
     <h1 class="h1Class">What is BOM & What is DOM</h1>
     <h2 id="h2ID">What really JS DO?</h2>
@@ -14,34 +15,36 @@
     <hr>
     <input class="form-control" type="text" name="cusName">
     <button class="btn btn-danger mt-3">Test</button>
-</section> -->
+</section> 
 
 
-<!-- <section class="container mt-3">
-    <section class="row"> -->
+<section class="container mt-3 position-relative bg-info-subtle p-2">
+    <hr><h1>Task 3 & Task 4</h1><hr> 
+    <section class="row">
         <!--Case One-->
-        <!-- <div class="col">
+        <div class="col">
             <h1 id="txt1">Hello There How are you.?</h1>
-            <input id="txt" class="form-control" type="text" placeholder="Input Something">
+            <input id="txt2" class="form-control" type="text" placeholder="Input Something">
             <button id="btn1" class="mt-2 btn btn-danger">Change Text</button>
-        </div> -->
+        </div>
 
         <!--Case Two-->
-        <!-- <div class="col">
+        <div class="col">
             <h1>Input an Image Url</h1>
             <input id="url" class="form-control" type="url" placeholder="Input Image URL">
             <div id="img" style="background-size: contain;background-repeat: no-repeat; background-position: center;height: 50vh;" class="mt-2 border shadow"></div>
             <button id="btn2" class="mt-2 btn btn-danger">Change Image</button>
-        </div> -->
-    <!-- </section>
-</section> -->
-<!-- 
-<section class="container">
+        </div>
+    </section>
+</section>
+
+<section class="container position-relative bg-info mt-3 p-2">
+    <hr><h1>Task 5</h1><hr> 
     <h1>Task Generator.!</h1>
    <div class="row">
        <div class="col-4">
-           <input id="txt" class="form-control" type="text" placeholder="Input a Task">
-           <button id="btn" class="btn btn-danger mt-2">Add Task</button>
+           <input id="txt-t5" class="form-control" type="text" placeholder="Input a Task">
+           <button id="btn-t5" class="btn btn-danger mt-2">Add Task</button>
        </div>
        <div class="offset-1 col-3 shadow overflow-x-hidden" style="height: 70vh">
            <ol id="list" class="list-group p-2">
@@ -49,9 +52,10 @@
            </ol>
        </div>
    </div>
-</section> -->
+</section>
 
-<section class="container">
+<section class="container position-relative mt-3 bg-info-subtle p-2">
+    <hr><h1>Task 6</h1><hr> 
     <h1>Counter.!</h1>
     <div class="row">
         <div class="col-4">
@@ -72,46 +76,46 @@
 <script>
 
     // ----------------------------------------------Task 1----------------------------------------
-//    document.querySelector('.h1Class').addEventListener("click",function(){
-//         document.querySelector('.h1Class').remove();
-//    });
+   document.querySelector('.h1Class').addEventListener("click",function(){
+        document.querySelector('.h1Class').remove();
+   });
 
 
     // ----------------------------------------------Task 2----------------------------------------
-    // document.querySelector('button').addEventListener("click",function(){
-    //     document.querySelector('.h1Class').innerText = document.querySelector('input').value;
-    // });
+    document.querySelector('button').addEventListener("click",function(){
+        document.querySelector('.h1Class').innerText = document.querySelector('input').value;
+    });
 
 
         // -----------------------------------------------Task 3 --------------------------------------
-    //     document.querySelector('#txt').addEventListener("keyup",function(){
-    //     document.querySelector('#txt1').innerText = document.querySelector('#txt').value;
-    // });
+        document.querySelector('#txt2').addEventListener("keyup",function(){
+        document.querySelector('#txt1').innerText = document.querySelector('#txt2').value;
+    });
 
-    // document.querySelector('#btn1').addEventListener("click",function(){
-    //     document.querySelector('#txt1').style.color = "red";
-    // });
+    document.querySelector('#btn1').addEventListener("click",function(){
+        document.querySelector('#txt1').style.color = "red";
+    });
 
     //----------------------------------------------------Task 4 ------------------------------------------
-    // document.querySelector('#btn2').addEventListener("click",function(){
-    //     var divContainer = document.querySelector('#img');
-    //     var img = document.querySelector('#url').value;
+    document.querySelector('#btn2').addEventListener("click",function(){
+        var divContainer = document.querySelector('#img');
+        var img = document.querySelector('#url').value;
 
-    //     divContainer.style.backgroundImage = `url(${img})`;
-    // });
+        divContainer.style.backgroundImage = `url(${img})`;
+    });
 
 
     //-----------------------------------------------------Task 5 -------------------------------------------
 
-    // document.querySelector('#btn').addEventListener("click",function(){
-    //     let content = document.querySelector('#txt').value;
-    //     let list = document.querySelector('#list');
-    //     let entry = document.createElement('li');
-    //     entry.setAttribute("class","list-group-item");
-    //     entry.textContent = content;
-    //     list.append(entry);
+    document.querySelector('#btn-t5').addEventListener("click",function(){
+        let content = document.querySelector('#txt-t5').value;
+        let list = document.querySelector('#list');
+        let entry = document.createElement('li');
+        entry.setAttribute("class","list-group-item");
+        entry.textContent = content;
+        list.append(entry);
 
-    // });
+    });
 
     //-----------------------------------------------------Task 6 -------------------------------------------
 
