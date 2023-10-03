@@ -127,6 +127,8 @@
 
     stbtn.addEventListener("click",function(){
 
+        clearInterval(timer);
+        
         if(parseInt(text.value)!=0){
             display.innerText = parseInt(text.value);
             text.value=0;
