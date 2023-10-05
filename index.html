@@ -177,6 +177,87 @@
   </section>
 
 
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h1 class="modal-title fs-6 text-white" id="exampleModalLabel">Add Customer</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-info-subtle">
+                <div class="container">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">ID</label>
+                            <input id="cus_id" type="email" class="form-control" placeholder="">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Customer Name</label>
+                            <input id="cus_nm" type="email" class="form-control" placeholder="">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Customer address</label>
+                            <input id="cus_add" type="email" class="form-control" placeholder="">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Customer TP</label>
+                            <input id="cus_tp" type="email" class="form-control" placeholder="">
+                        </div>
+
+                        <button id="ad_cus_btn" type="button" class="btn btn-primary">Add Customer</button>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--update modal-->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-success">
+                <h1 class="modal-title fs-6 text-white" id="exampleModalLabel2">Update Customer</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-success-subtle">
+                <div class="container">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">ID</label>
+                            <input type="email" class="form-control" placeholder="">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Customer Name</label>
+                            <input type="email" class="form-control" placeholder="">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Customer address</label>
+                            <input type="email" class="form-control" placeholder="">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Customer TP</label>
+                            <input type="email" class="form-control" placeholder="">
+                        </div>
+
+                        <button type="button" class="btn btn-success">Update Customer</button>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
  <script src ="assets/js/bootstrap.js"></script>
 
 <script src="/assets/js/code.jquery.com_jquery-3.7.1.min.js"></script>
@@ -274,109 +355,28 @@
     let customer;
     let cus_info=new Array();
 
-    $('#ad_cus_btn').click(function(){
-            customer = {    id:$('#cus_id').val(),
-                            name:$('#cus_nm').val() ,
-                            add:$('#cus_add').val(),
-                            tp:$('#cus_tp').val()
+    qr('#ad_cus_btn').click(function(){
+            customer = {    id:qr('#cus_id').val(),
+                            name:qr('#cus_nm').val() ,
+                            add:qr('#cus_add').val(),
+                            tp:qr('#cus_tp').val()
                         };
             cus_info.push(customer);
-            $('#cus_id').val("");
-            $('#cus_nm').val("") ;
-            $('#cus_add').val("");
-            $('#cus_tp').val("");
+            qr('#cus_id').val("");
+            qr('#cus_nm').val("") ;
+            qr('#cus_add').val("");
+            qr('#cus_tp').val("");
             getall(customer);
             console.log(cus_info);
                                     });
                                     
     function getall(customer){
        
-        $('#body').append(`<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.add}</td><td>${customer.tp}</td><td>Action</td></tr>`);
+        qr('#body').append(`<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.add}</td><td>${customer.tp}</td><td>Action</td></tr>`);
       }
 
 
 </script>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header bg-primary">
-                <h1 class="modal-title fs-6 text-white" id="exampleModalLabel">Add Customer</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body bg-info-subtle">
-                <div class="container">
-                    <form>
-                        <div class="mb-3">
-                            <label class="form-label">ID</label>
-                            <input id="cus_id" type="email" class="form-control" placeholder="">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Customer Name</label>
-                            <input id="cus_nm" type="email" class="form-control" placeholder="">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Customer address</label>
-                            <input id="cus_add" type="email" class="form-control" placeholder="">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Customer TP</label>
-                            <input id="cus_tp" type="email" class="form-control" placeholder="">
-                        </div>
-
-                        <button id="ad_cus_btn" type="button" class="btn btn-primary">Add Customer</button>
-                    </form>
-                </div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--update modal-->
-<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header bg-success">
-                <h1 class="modal-title fs-6 text-white" id="exampleModalLabel2">Update Customer</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body bg-success-subtle">
-                <div class="container">
-                    <form>
-                        <div class="mb-3">
-                            <label class="form-label">ID</label>
-                            <input type="email" class="form-control" placeholder="">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Customer Name</label>
-                            <input type="email" class="form-control" placeholder="">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Customer address</label>
-                            <input type="email" class="form-control" placeholder="">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Customer TP</label>
-                            <input type="email" class="form-control" placeholder="">
-                        </div>
-
-                        <button type="button" class="btn btn-success">Update Customer</button>
-                    </form>
-                </div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div>
 
 </body>
 </html>
