@@ -106,7 +106,7 @@
     </section>
 </section>
 
-<section id="cussec" class="container-fluid vh-100 bg-info-subtle flex-column pt-5 align-items-center justify-content-center " style="display: none">
+<section id="cussec" class="container-fluid vh-100 bg-info-subtle flex-column pt-5 align-items-center justify-content-center " style="display: flex">
     <div class="row bg-light d-flex justify-content-between rounded-2 border border-2" style="height: 10vh;width: 80%;">
         <div class="col-2 d-flex align-items-center justify-content-center" style="height: 100%;">
             <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
@@ -175,6 +175,9 @@
         </table>
     </div>
   </section>
+
+
+ <script src ="assets/js/bootstrap.js"></script>
 
 <script src="/assets/js/code.jquery.com_jquery-3.7.1.min.js"></script>
 
@@ -293,5 +296,87 @@
 
 
 </script>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h1 class="modal-title fs-6 text-white" id="exampleModalLabel">Add Customer</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-info-subtle">
+                <div class="container">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">ID</label>
+                            <input id="cus_id" type="email" class="form-control" placeholder="">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Customer Name</label>
+                            <input id="cus_nm" type="email" class="form-control" placeholder="">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Customer address</label>
+                            <input id="cus_add" type="email" class="form-control" placeholder="">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Customer TP</label>
+                            <input id="cus_tp" type="email" class="form-control" placeholder="">
+                        </div>
+
+                        <button id="ad_cus_btn" type="button" class="btn btn-primary">Add Customer</button>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--update modal-->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-success">
+                <h1 class="modal-title fs-6 text-white" id="exampleModalLabel2">Update Customer</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-success-subtle">
+                <div class="container">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">ID</label>
+                            <input type="email" class="form-control" placeholder="">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Customer Name</label>
+                            <input type="email" class="form-control" placeholder="">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Customer address</label>
+                            <input type="email" class="form-control" placeholder="">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Customer TP</label>
+                            <input type="email" class="form-control" placeholder="">
+                        </div>
+
+                        <button type="button" class="btn btn-success">Update Customer</button>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
