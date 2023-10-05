@@ -190,11 +190,9 @@
 
     //---------------------------------------------------------------- Task 7 ----------------------------------------------------------------
 
-    let q = jQuery.noConflict() ;
-
-    q("#btn7").click(function(){
-        q("#ul").append(`<li>${q('#txt7').val()}</li>`);
-        q("#img2").attr("src",`${q('#txt7').val()}`);
+    $("#btn7").click(function(){
+        q("#ul").append(`<li>${$('#txt7').val()}</li>`);
+        $("#img2").attr("src",`${$('#txt7').val()}`);
     });
 
 </script>
