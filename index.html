@@ -71,6 +71,41 @@
     </div>
 </section>
 
+<section class="container mt-5 bg-info p-2">
+    <h1 id="main">Traversing Methods in Jquery</h1>
+    <section class="row">
+        <div class="col-3">
+            <input id="txt7" class="form-control" type="text" placeholder="input">
+            <button id="btn7" class="btn btn-danger mt-2">Test</button>
+
+        </div>
+        <div class="col-5">
+            <ol class="list-group" id="task">
+
+            </ol>
+        </div>
+        <div class="col">
+            <div id="con" class="shadow">
+                <img id="img2" src="sss" class="w-100 h-100" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="row mt-5">
+        <div class="col-12">
+            <ul id="ul" class="list-group">
+                <li>append()</li>
+                <li>prepend()</li>
+                <li>remove()</li>
+                <li>text()</li>
+                <li>val()</li>
+                <li>click()</li>
+                <li>attr()</li>
+                <li>css</li>
+            </ul>
+        </div>
+    </section>
+</section>
+
 
 <script src="/assets/js/code.jquery.com_jquery-3.7.1.min.js"></script>
 
@@ -153,7 +188,14 @@
         display.innerText = parseInt(display.innerText)-1;
     });
 
+    //---------------------------------------------------------------- Task 7 ----------------------------------------------------------------
 
+    let q = jQuery.noConflict() ;
+
+    q("#btn7").click(function(){
+        q("#ul").append(`<li>${q('#txt7').val()}</li>`);
+        q("#img2").attr("src",`${q('#txt7').val()}`);
+    });
 
 </script>
 </body>
